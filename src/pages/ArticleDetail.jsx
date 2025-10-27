@@ -90,7 +90,7 @@ function ArticleDetail() {
                   } else if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
                     return <h4 key={index} className="product-heading">{paragraph.replace(/\*\*/g, '')}</h4>;
                   } else if (paragraph.trim()) {
-                    return <p key={index}>{paragraph}</p>;
+                    return <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }}></p>;
                   }
                   return null;
                 })}
