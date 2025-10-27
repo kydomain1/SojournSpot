@@ -510,7 +510,7 @@ Remember, personal finance is just that – personal. These recommendations prov
     date: "2025-09-12",
     author: "Lisa Chang",
     excerpt: "Discover how Cameo connects you with thousands of celebrities for personalized video messages. Perfect for birthdays, celebrations, or just making someone's day unforgettable.",
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80",
+    image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?w=1200&h=800",
     content: `
 Ever dreamed of getting a birthday shout-out from your favorite celebrity? Or perhaps you want to surprise a friend with a personalized message from their idol? <a href="https://www.linkbux.com/track?pid=LB00012957&mid=83729&url=https%3A%2F%2Fwww.cameo.com%2F" target="_blank" rel="noopener noreferrer">Cameo</a> makes these dreams a reality, connecting fans with thousands of stars for customized video messages.
 
@@ -585,29 +585,30 @@ Whether you're celebrating a milestone, lifting someone's spirits, or simply wan
 Ready to create magic? Visit <a href="https://www.linkbux.com/track?pid=LB00012957&mid=83729&url=https%3A%2F%2Fwww.cameo.com%2F" target="_blank" rel="noopener noreferrer">Cameo</a> today and discover thousands of celebrities waiting to make someone's day extraordinary.
     `,
     images: [
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80",
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80",
-      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=800&q=80",
-      "https://images.unsplash.com/photo-1530569673472-307dc017a82d?w=800&q=80"
+      "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?w=1200&h=800",
+      "https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg?w=800&h=600",
+      "/images/演讲.png",
+      "/images/名人目录.png",
+      "https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?w=800&h=600"
     ],
     products: [
       {
         name: "Celebrity Video Message",
         price: "From $1",
         link: "https://www.linkbux.com/track?pid=LB00012957&mid=83729&url=https%3A%2F%2Fwww.cameo.com%2F",
-        image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&q=80"
+        image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?w=400&h=400"
       },
       {
         name: "Cameo for Business",
         price: "Custom Pricing",
         link: "https://www.linkbux.com/track?pid=LB00012957&mid=83729&url=https%3A%2F%2Fwww.cameo.com%2F",
-        image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=80"
+        image: "https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg?w=400&h=400"
       },
       {
         name: "Cameo Video Call",
         price: "Varies",
         link: "https://www.linkbux.com/track?pid=LB00012957&mid=83729&url=https%3A%2F%2Fwww.cameo.com%2F",
-        image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&q=80"
+        image: "https://images.pexels.com/photos/3807755/pexels-photo-3807755.jpeg?w=400&h=400"
       }
     ]
   }

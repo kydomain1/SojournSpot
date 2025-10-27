@@ -83,32 +83,55 @@ function ArticleDetail() {
 
               <div className="article-text">
                 {article.content.split('\n\n').map((paragraph, index) => {
+                  const elements = [];
+                  
                   if (paragraph.startsWith('## ')) {
-                    return <h2 key={index}>{paragraph.replace('## ', '')}</h2>;
+                    elements.push(<h2 key={index}>{paragraph.replace('## ', '')}</h2>);
                   } else if (paragraph.startsWith('### ')) {
-                    return <h3 key={index}>{paragraph.replace('### ', '')}</h3>;
+                    elements.push(<h3 key={index}>{paragraph.replace('### ', '')}</h3>);
                   } else if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
-                    return <h4 key={index} className="product-heading">{paragraph.replace(/\*\*/g, '')}</h4>;
+                    elements.push(<h4 key={index} className="product-heading">{paragraph.replace(/\*\*/g, '')}</h4>);
                   } else if (paragraph.trim()) {
-                    return <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }}></p>;
+                    elements.push(<p key={index} dangerouslySetInnerHTML={{ __html: paragraph }}></p>);
                   }
-                  return null;
+                  
+                  // Insert images at specific positions in the content
+                  if (article.images && article.images.length > 1) {
+                    if (index === 5 && article.images[1]) {
+                      elements.push(
+                        <div key={`img-${index}-1`} className="inline-image">
+                          <img src={article.images[1]} alt={`${article.title} illustration`} loading="lazy" />
+                        </div>
+                      );
+                    }
+                    if (index === 9 && article.images[2]) {
+                      elements.push(
+                        <div key={`img-${index}-2`} className="inline-image">
+                          <img src={article.images[2]} alt="Pep Talks and Motivation" loading="lazy" />
+                        </div>
+                      );
+                    }
+                    if (index === 12 && article.images[3]) {
+                      elements.push(
+                        <div key={`img-${index}-3`} className="inline-image">
+                          <img src={article.images[3]} alt="How Cameo Works - Celebrity Directory" loading="lazy" />
+                        </div>
+                      );
+                    }
+                    if (index === 17 && article.images[4]) {
+                      elements.push(
+                        <div key={`img-${index}-4`} className="inline-image">
+                          <img src={article.images[4]} alt={`${article.title} illustration`} loading="lazy" />
+                        </div>
+                      );
+                    }
+                  }
+                  
+                  return elements;
                 })}
               </div>
 
-              {/* Article Images Gallery */}
-              {article.images && article.images.length > 1 && (
-                <div className="article-gallery">
-                  <h3>Gallery</h3>
-                  <div className="gallery-grid">
-                    {article.images.slice(1).map((image, index) => (
-                      <div key={index} className="gallery-item">
-                        <img src={image} alt={`${article.title} - Image ${index + 1}`} loading="lazy" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+              {/* Article Images Gallery - Hidden since images are now inline */}
 
               {/* Products Section */}
               {article.products && article.products.length > 0 && (
